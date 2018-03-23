@@ -1,10 +1,10 @@
 import PhysicalDrivers.LEDNotificationDriver;
+import VirtualDevices.AlarmNotification;
+import VirtualDevices.LEDNotification;
 
 public class Actions
 {
   // start mock, delete during integration
-  private class AlarmNotification{}
-  private class LEDNotification{}
   private class SignalSender
   {
     SignalSender(AlarmNotification a, LEDNotification n){}
