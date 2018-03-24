@@ -1,5 +1,9 @@
 package electronicBrake;
 
+import VirtualDevices.BrakeButton;
+import VirtualDevices.VehicleElectronics;
+import electronicBrake.enums.EventTypes;
+
 /**
  * Created by Antonio on 3/23/18.
  *
@@ -9,10 +13,22 @@ package electronicBrake;
 public class Events
 {
   BrakeControl brakeControl;
-  PressHandler pressHandler;
-  GearHandler gearHandler;
+  BrakeButton brakebutton;
+  VehicleElectronics vehicleElectronics;
+  // PressHandler pressHandler;
+  // GearHandler gearHandler;
 
-  public Events()
+  public Events(BrakeControl brakeControl,
+                BrakeButton brakeButton,
+                VehicleElectronics vehicleElectronics)
   {
+    this.brakeControl = brakeControl;
+    this.brakebutton = brakeButton;
+    this.vehicleElectronics = vehicleElectronics;
+  }
+
+  public boolean didEventOccur(EventTypes event)
+  {
+    return (Math.random() < 0.5);
   }
 }
