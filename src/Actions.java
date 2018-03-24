@@ -2,6 +2,7 @@ import PhysicalDrivers.LEDNotificationDriver;
 import VirtualDevices.AlarmNotification;
 import VirtualDevices.LEDNotification;
 import electronicBrake.BrakeControl;
+import electronicBrake.enums.ActionTypes;
 
 public class Actions
 {
@@ -28,10 +29,12 @@ public class Actions
    *
    * Individual actions are derived from incoming events in combination with current state.
    */
+  /*
   public enum ActionType
   {
     FULL_ENGAGE, FULL_DISENGAGE, GRADUAL_ENGAGE, RED, BLUE, ORANGE, PLAY_TONE
   }
+  */
 
   /**
    * Max force that is accepted by {@link BrakeControl}.
@@ -67,15 +70,15 @@ public class Actions
    *
    * @param actionType Action who's meaning will be interpreted and triggered in relevant component.
    */
-  public void execute(final ActionType actionType)
+  public void execute(final ActionTypes actionType)
   {
-    if      (actionType == ActionType.FULL_ENGAGE) fullEngage();
-    else if (actionType == ActionType.FULL_DISENGAGE) fullDisengage();
-    else if (actionType == ActionType.GRADUAL_ENGAGE) gradualEngage();
-    else if (actionType == ActionType.RED) red();
-    else if (actionType == ActionType.BLUE) blue();
-    else if (actionType == ActionType.ORANGE) orange();
-    else if (actionType == ActionType.PLAY_TONE) playTone();
+    if      (actionType == ActionTypes.FULL_ENGAGE) fullEngage();
+    else if (actionType == ActionTypes.FULL_DISENGAGE) fullDisengage();
+    else if (actionType == ActionTypes.GRADUAL_ENGAGE) gradualEngage();
+    else if (actionType == ActionTypes.RED) red();
+    else if (actionType == ActionTypes.BLUE) blue();
+    else if (actionType == ActionTypes.ORANGE) orange();
+    else if (actionType == ActionTypes.PLAY_TONE) playTone();
     else throw new UnsupportedOperationException("Attempt to execute unsupported ActionType");
   }
 
