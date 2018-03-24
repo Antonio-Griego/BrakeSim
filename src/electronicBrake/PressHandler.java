@@ -1,10 +1,11 @@
+package electronicBrake;
+
 import PhysicalDrivers.BrakeButtonDriver;
 import VirtualDevices.BrakeButton;
 
 /**
  * This class keeps track of button presses.
  */
-
 public class PressHandler
 {
   public enum PressType
