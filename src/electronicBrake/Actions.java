@@ -1,7 +1,8 @@
+package electronicBrake;
+
 import PhysicalDrivers.LEDNotificationDriver;
 import VirtualDevices.AlarmNotification;
 import VirtualDevices.LEDNotification;
-import electronicBrake.BrakeControl;
 import electronicBrake.enums.ActionTypes;
 
 public class Actions
@@ -57,7 +58,7 @@ public class Actions
   private final BrakeControl brakeControl;
   private final SignalSender signalSender;
 
-  Actions(final BrakeControl brakeControl,
+  public Actions(final BrakeControl brakeControl,
           final AlarmNotification alarmNotifiaction,
           final LEDNotification ledNotification)
   {
