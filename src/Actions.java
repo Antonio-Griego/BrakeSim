@@ -1,6 +1,7 @@
 import PhysicalDrivers.LEDNotificationDriver;
 import VirtualDevices.AlarmNotification;
 import VirtualDevices.LEDNotification;
+import electronicBrake.BrakeControl;
 
 public class Actions
 {
@@ -11,12 +12,14 @@ public class Actions
     void play(){}
     void setColor(LEDNotificationDriver.Color color){}
   }
+  /*
   private class BrakeControl
   {
     void setForce(final double f){}
     double getForce(){return 0;}
     boolean isEngaged(){return false;}
   }
+  */
   // end mock
 
 
