@@ -28,4 +28,5 @@ public class BrakeController
     brakeControllerDriver.applyForce(pressure);
   }
 
+  public BrakeStatus getBrakeStatus() { return brakeStatus; }
 }
