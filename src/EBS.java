@@ -100,8 +100,6 @@ public class EBS
    */
   private void updateState(List<EventTypes> eventsList)
   {
-    // System.out.println("state: " + state + "\nnumber of events: " + eventsList.size() + "\n");
-
     switch(state)
     {
       case NULL:
@@ -214,8 +212,8 @@ public class EBS
         {
           // The implementation here is implied but not explicitly stated
           // by the specification... it might be problematic.
-          previousState = StateType.NULL;
           state = previousState;
+          previousState = StateType.NULL;
         }
         else if(isLongPressAndParked(eventsList))
         {
