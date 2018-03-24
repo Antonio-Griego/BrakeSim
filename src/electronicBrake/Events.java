@@ -12,9 +12,11 @@ import electronicBrake.BrakeControl;
  * Created by caleb on 3/23/2018.
  */
 public class Events {
+    private BrakeControl brakeControl;
     private PressHandler pressHandler;
     private GearHandler gearHandler;
     public Events(BrakeControl brakeControl, BrakeButton brakeButton, VehicleElectronics vehicleElectronics){
+        this.brakeControl = brakeControl;
         this.pressHandler = new PressHandler(brakeButton);
         this.gearHandler = new GearHandler(vehicleElectronics);
     }
